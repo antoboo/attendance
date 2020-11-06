@@ -9,10 +9,10 @@
 
 
 //  Remote Database connection 
-    $host = 'sql9.freemysqlhosting.net';
-    $db = 'sql9373512';
-    $user = 'sql9373512';
-    $pass = 'bikFYZaLL7';
+    $host = 'sql3.freemysqlhosting.net';
+    $db = 'sql3374843';
+    $user = 'sql3374843';
+    $pass = 'd6ATRueWC6';
     $charset ='utf8mb4';
 
     $dsn = "mysql:host=$host; dbname=$db; charset=$charset";
