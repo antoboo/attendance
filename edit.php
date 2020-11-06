@@ -3,6 +3,7 @@
     
         $title = 'Edit Record';
         require_once 'includes/header.php';
+        require_once 'includes/auth_check.php';
         require_once 'db/conn.php';
 
         $results = $crud -> getSpecialties();
@@ -80,7 +81,7 @@
             <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
         </div>
 
-        <button type="submit"  name = "submit" class="btn btn-success">Save Changes</button>
+        <button type="submit"  name = "submit" id ="submit" class="btn btn-success">Save Changes</button>
         <a href = viewrecords.php  class="btn btn-primary float-right"> Back to List </a>   
 
     </form>
