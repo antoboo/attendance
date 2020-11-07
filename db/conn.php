@@ -6,8 +6,6 @@
     // $pass = '';
     // $charset ='utf8mb4';
 
-
-
 //  Remote Database connection 
     $host = 'sql3.freemysqlhosting.net';
     $db = 'sql3374843';
