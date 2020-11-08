@@ -21,7 +21,7 @@ include_once 'includes/session.php'
     <title> Attendance - <?php echo $title ?> </title>
 
   </head>
-  <body background="C:\xampp\htdocs\attendance\images\pngtree-dark-abstract-background-with-overlap-layers-image_305025.jpg">
+
     
      <div class ="container">
 
@@ -45,7 +45,7 @@ include_once 'includes/session.php'
                               
           <?php } else{ ?>
 
-              <a class="nav-item nav-link" href="#"><span> Hello <?php echo $_SESSION['username'] ?>!</span> <span class="sr-only">(current)</span> </a>
+              <a class="nav-item nav-link" href="#"><span> Hello <?php echo $_SESSION['username'] ?>!!!!</span> <span class="sr-only">(current)</span> </a>
               <a class="nav-item nav-link" href="logout.php"> Logout <span class="sr-only">(current)</span> </a>
           
           <?php } ?>

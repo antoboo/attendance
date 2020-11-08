@@ -1,15 +1,15 @@
 <?php
-    require 'vendor/autoload.php';    
+     require 'vendor/autoload.php';    
 
     class SendEmail{
         public static function SendMail($to, $subject, $content){
         
-            $key = '93DF41D594099193F5BA5FC0272A4E191323A223D1D9F33CF27C00C36239AD478E3726A645359148B1FB947551C6F4CA';
+            $key = 'E28B9A4036D3FA6A331B33A7DC26F3FD54F7CB5306B4535AEE72BFDD0676C4755B8C5FCD39C43247439A38EE066D0082';
             $url = 'https://api.elasticemail.com/v2/email/send';
 
             try {
         
-                $email = array('from'=> "annntoboo@gmail.com",
+                $email = array('from'=>'trevior.williams@gmail.com',
                 'fromName' => 'Antoinette',
                 'apikey' => $key,
                 'subject' => $subject,
@@ -38,37 +38,41 @@
             }
         }
     }
-?>
-
-
-<!-- <?php 
-
-//require 'vendor/autoload.php';
-
-//class SendEmail{
- //   public static function Sendmail($to,$subject,$content){
-
-      //  $key = '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';
-
-      //  $email = new \SendGrid\Mail\Mail();
-        // $email->setFrom("antoinette.roberts85@yahoo.com","Antoinette Roberts-Graham");
-        // $email->setSubject($subject);
-        // $email->addTo($to);
-        // $email->addContent("text/plain",$content);
-
-        // $sendgrid = new \SendGrid($key);
-
-        // try{
-        //     $response = $sendgrid->send($email);
-        //     return $response;
-        // }catch(Exception $e){
-        //     echo 'Email exception Caught:'.$e->getMessage()."\n";
-        //     return false;
-        // }
-
-   // }
-//}
+ ?>
 
 
 
-//?> -->
+
+
+
+ <!-- <?php 
+
+// require 'vendor/autoload.php';
+
+// class SendEmail{
+//    public static function Sendmail($to,$subject,$content){
+
+//        $key = '';
+
+//        $email = new \SendGrid\Mail\Mail();
+//         $email->setFrom("","Ann");
+//         $email->setSubject($subject);
+//         $email->addTo($to);
+//         $email->addContent("text/plain",$content);
+
+//         $sendgrid = new \SendGrid($key);
+
+//         try{
+//             $response = $sendgrid->send($email);
+//             return $response;
+//         }catch(Exception $e){
+//             echo 'Email exception Caught:'.$e->getMessage()."\n";
+//             return false;
+//         }
+
+//    }
+// } 
+
+
+
+?> -->
