@@ -191,12 +191,12 @@ class Email extends \ElasticEmailClient\ElasticRequest
      * @param bool $updateStatus Should the existing contacts' status be changed automatically based on the validation results
      * @return string
      */
-    public function VerifyList($emails = null, $rule = null, array $listOfEmails = array(), $uploadContacts = false, $updateStatus = false) {
+    public function VerifyList($email = null, $rule = null, array $listOfEmails = array(), $uploadContacts = false, $updateStatus = false) {
         return $this->sendRequest('email/verifylist', array(
                     'rule' => $rule,
                     'listOfEmails' => (count($listOfEmails) === 0) ? null : join(';', $listOfEmails),
                     'uploadContacts' => $uploadContacts,
-                    'updateStatus' => $updateStatus), "POST", $emails);
+                    'updateStatus' => $updateStatus), "POST", $email);
     }
 
     /**

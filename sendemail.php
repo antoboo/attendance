@@ -1,22 +1,22 @@
 <?php
-     require 'vendor/autoload.php';    
+    require 'vendor/autoload.php';    
 
     class SendEmail{
         public static function SendMail($to, $subject, $content){
-        
             $key = 'E28B9A4036D3FA6A331B33A7DC26F3FD54F7CB5306B4535AEE72BFDD0676C4755B8C5FCD39C43247439A38EE066D0082';
             $url = 'https://api.elasticemail.com/v2/email/send';
 
             try {
-        
-                $email = array('from'=>'trevior.williams@gmail.com',
-                'fromName' => 'Antoinette',
+
+                $email = array('from' => 'antoboo@yahoo.com',
+                'fromName' => 'Ann',
                 'apikey' => $key,
                 'subject' => $subject,
                 'to' => $to,
                 'bodyHtml' => $content,
                 'bodyText' => $content,
                 'isTransactional' => false);
+                
                 $ch = curl_init();
                 curl_setopt_array($ch, array(
                     CURLOPT_URL => $url,
@@ -30,7 +30,7 @@
                 $result=curl_exec ($ch);
                 curl_close ($ch);
                 
-                echo $result;
+                //echo $result;
 
             } catch (Exception $e) {
                 echo 'Email exception Caught : ' . $e->getMessage() . "\n";
@@ -38,14 +38,14 @@
             }
         }
     }
- ?>
+?>
 
 
 
 
 
 
- <!-- <?php 
+ <?php 
 
 // require 'vendor/autoload.php';
 
@@ -55,7 +55,7 @@
 //        $key = '';
 
 //        $email = new \SendGrid\Mail\Mail();
-//         $email->setFrom("","Ann");
+//         $email->setFrom("annntoboo@gmail.com","Ann");
 //         $email->setSubject($subject);
 //         $email->addTo($to);
 //         $email->addContent("text/plain",$content);
@@ -75,4 +75,4 @@
 
 
 
-?> -->
+?> 
