@@ -6,6 +6,7 @@
     require_once 'db/conn.php';
 
 
+//Made changes to the getAttendees function
     $results = $crud->getAttendees();
 ?>
 
