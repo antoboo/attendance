@@ -70,6 +70,25 @@
             <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
         </div>
 
+        <br/>
+
+        <div class="custom-file">
+            <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar" >
+            <label class="custom-file-label" for="avatar">Choose File</label>
+            <small id="avatar" class="form-text text-danger">File Upload is Optional</small>
+
+        </div>
+
+        <!-- <div>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit">
+            </form>
+        </div> -->
+
+
+
         <button type="submit" id="submit" name = "submit" class="btn btn-primary btn-block" disable> <span class="spinner-grow spinner-grow-sm"></span>Register Now</button>
 
     </form>

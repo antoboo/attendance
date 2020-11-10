@@ -11,12 +11,12 @@
         
         
             
-            public function insertAttendees($fname, $lname, $dob, $email, $contact, $speciality)
+            public function insertAttendees($fname, $lname, $dob, $email, $contact, $speciality, $avatar_path)
             {
                 
                 try {
                     //define sql statement to be excuted
-                    $sql = "INSERT INTO attendee (firstname,lastname,dateofbirth,emailaddress,contactnumber,specialty_id)VALUES (:fname, :lname, :dob,  :email, :contact, :specialty)";
+                    $sql = "INSERT INTO attendee (firstname,lastname,dateofbirth,emailaddress,contactnumber,specialty_id,avatar_path)VALUES (:fname, :lname, :dob,  :email, :contact, :specialty, :avatar_path)";
                     //define sql statement to be excuted
                     $stmt = $this -> db -> prepare($sql);       
                     //bind all placeholder to the actual values
@@ -26,7 +26,7 @@
                     $stmt->bindparam(':email', $email);
                     $stmt->bindparam(':contact', $contact);
                     $stmt->bindparam(':specialty', $speciality);
-
+                    $stmt->bindparam(':avatar_path', $avatar_path);
                     $stmt->execute();
                     return true;
 
