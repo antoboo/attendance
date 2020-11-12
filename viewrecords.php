@@ -39,8 +39,9 @@
         
     </table>
 
-    <a href = "index.php?id=<?php echo $r['attendee_id'] ?> " class="btn btn-success float-right"> Add New Record</a> 
-
+    <br/> <br/> <br/><br/><br/><br/><br/>
+    <a onclick="return confirm ('Are you are sure you want to delete All of the record/s?');" href = "delete.php?id=<?php echo $r['attendee_id'] ?>" class="btn btn-danger float-right fix-bottom"> Delete All Records</a> 
+    <a href = "index.php?id=<?php echo $r['attendee_id'] ?> " class="btn btn-success float-right fix-bottom"> Add New Record</a> 
 
 
 

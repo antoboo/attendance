@@ -8,13 +8,23 @@ if(!isset ($_GET['id']))
 
 }
 
-else{
-    //GET ID values
-    $id = $_GET['id'];
+elseif ($result = $crud->deleteAllAttendee()){
+ 
+    //Call Delete All Function
+    header("Location: viewrecords.php");
 
-    //Call Delete Function
-    $result = $crud->deleteAttendee($id);
+}
     
+    else{
+        //GET ID values
+        $id = $_GET['id'];
+    
+        //Call Delete Function
+        $result = $crud->deleteAttendee($id);
+        
+
+
+
     //Redirect to list 
     if($result)
     {
@@ -25,13 +35,6 @@ else{
     }
 
 }
-
-
-
-
-
-
-
 
 
 ?>

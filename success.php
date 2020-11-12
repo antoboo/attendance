@@ -13,23 +13,26 @@
             $email = $_POST['email'];
             $contact = $_POST['phone'];
             $speciality = $_POST['specialty'];
+            
           
 
             if(isset($_GET['avatar'])){
             $orig_file = $_FILES["avatar"]["tmp_name"];
-            $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
-            $target_dir = 'uploads/';
-            $destination = "$target_dir$contact.$ext";
-            move_uploaded_file($orig_file, $destination); }
+        $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+        $target_dir = 'uploads/';
+        $destination = "$target_dir$contact.$ext";
+        move_uploaded_file($orig_file,$destination);}
 
         //exit();
 
             //Call function to insert and track if success or not 
-            $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $contact, $speciality, $destination);
+            $isSuccess = $crud->insertAttendees( $fname,$lname, $dob, $email, $contact, $speciality, $destination);
             $specialityName = $crud->getSpecialtyById($speciality);
 
             if($isSuccess){
                 SendEmail::Sendmail($email,"Welcome to IT Conference 2020","You have sucessfully Register. Be educated");
+               
+               
                 include 'includes/successmessage.php';
 
             }else {
@@ -63,7 +66,7 @@
         </div>
 
     -->
-  <img src = "<?php echo $destination?> " class ="rounded-circle" style = "width: 20%; height:20%"/>
+  <img src = "<?php echo $destination;?> " class ="rounded-circle" style = "width: 20%; height:20%"/>
 
     <div class="card" style="width: 20rem;">
             <div class="card-body">

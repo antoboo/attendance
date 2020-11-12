@@ -19,21 +19,20 @@ include_once 'includes/session.php'
     <link rel="stylesheet" href ="css/site.css">
 
     <title> Attendance - <?php echo $title ?> </title>
+    <link rel="stylesheet" href="css/style.css">
 
   </head>
+  <body style="color:blue">
+ 
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">        
+          <a class="navbar-brand" href="index.php"> <p style="color:white">IT Conference</p></a>
 
-    
-     <div class ="container">
-
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">        
-          <a class="navbar-brand" href="index.php">IT Conference</a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <div class="navbar-nav  active mr-auto">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse container" id="navbarNavAltMarkup">
+        <div class="navbar-nav mr-auto">
                   <a class="nav-item nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                   <a class="nav-item nav-link" href="viewrecords.php">View Attendance</a>
           </div>
@@ -49,9 +48,18 @@ include_once 'includes/session.php'
               <a class="nav-item nav-link" href="logout.php"> Logout <span class="sr-only">(current)</span> </a>
           
           <?php } ?>
-          
           </div>
+            </div>
+            </nav>
 
-       </nav>
+     <div class ="container">
+
+
+
+      
+          
+      
+
+       
 
        <br/>

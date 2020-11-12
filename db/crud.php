@@ -148,7 +148,25 @@
 
             }
 
+            public function deleteAllAttendee(){
+                
+                try {
 
+                    $sql = "TRUNCATE attendee";
+                    $stmt = $this->db->prepare($sql);
+                    //$stmt -> bindparam(':id',$id);
+                    $stmt ->execute();
+                    return true;
+
+                } 
+                
+                catch ( PDOException $e)
+                {
+                    echo $e->getMessage();
+                    return false;
+                }
+
+            }
 
 
 

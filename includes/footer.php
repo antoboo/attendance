@@ -1,9 +1,10 @@
             
-            
-            <div id = "footer" >
-                <?PHP echo 'Copyright ' .date('y'); ?>  
-            </div>
+            <div id="footer" class="p-1 bg-primary text-white fixed-bottom">
+            <p class="text-center">Copyright &copy; - IT Conference Attendance System <?php echo date('Y'); ?></p>
+
         </div>
+
+    
 
 <!-- Optional JavaScript; choose one of the two! -->
 
@@ -25,7 +26,7 @@
                 </script>
 
 
-
+            
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
