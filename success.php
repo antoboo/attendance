@@ -14,6 +14,7 @@
             $contact = $_POST['phone'];
             $speciality = $_POST['specialty'];
             
+            
           
 
             if(isset($_GET['avatar'])){
@@ -22,8 +23,8 @@
         $target_dir = 'uploads/';
         $destination = "$target_dir$contact.$ext";
         move_uploaded_file($orig_file,$destination);}
-
-        //exit();
+                echo $destination;
+        exit();
 
             //Call function to insert and track if success or not 
             $isSuccess = $crud->insertAttendees( $fname,$lname, $dob, $email, $contact, $speciality, $destination);
@@ -77,7 +78,7 @@
                 <p class="card-text"> Date of Birth:  <?php echo $_POST['dob'];  ?> </p>
                 <p class="card-text"> Email Add: <?php echo $_POST['email'];  ?> </p>
                 <p class="card-text"> Telephone Number: <?php echo $_POST['phone'];  ?> </p>
-                
+                <p class="card-text"> Telephone Number: <?php echo $_POST['phone'];  ?> </p>
             </div>
         </div>
 
