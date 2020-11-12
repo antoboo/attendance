@@ -23,8 +23,8 @@
         $target_dir = 'uploads/';
         $destination = "$target_dir$contact.$ext";
         move_uploaded_file($orig_file,$destination);}
-                echo $destination;
-        exit();
+                print $destination;
+        //exit();
 
             //Call function to insert and track if success or not 
             $isSuccess = $crud->insertAttendees( $fname,$lname, $dob, $email, $contact, $speciality, $destination);
