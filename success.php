@@ -14,8 +14,7 @@
             $contact = $_POST['phone'];
             $speciality = $_POST['specialty'];
           
-            
-            
+                                
           
 
             if(isset($_GET["avatar"])){

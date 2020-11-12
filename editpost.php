@@ -15,7 +15,7 @@ require_once 'db/conn.php';
 
 
 //Call CRUD Function 
-        $result = $crud->editAttendee($id, $fname, $lname, $dob, $email, $contact, $specialty);
+        $result = $crud->editAttendee($id, $fname, $lname, $dob, $email, $contact, $specialty, $destination);
         
 //Redirect to index.php
         if ($result){
