@@ -19,7 +19,7 @@
 ?>
 
 
-<img src = "<?php echo $result['avatar_path'];?> " class ="rounded-circle"style = "width: 20%; height:20%"/>
+<img src="<?php echo $result['avatar_path'];?> " class ="rounded-circle"style ="width: 20%; height:20%"/>
         
         <div class="card" style="width: 20rem;">
             <div class="card-body">

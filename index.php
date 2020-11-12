@@ -60,14 +60,14 @@
         <div class="form-group">
             <label for="email">Email address</label>
             <input required type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
-            <medium id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</medium>
+            <medium id="emailHelp" class="form-text text-white">We'll never share your email with anyone else.</medium>
         </div>
 
 
         <div class="form-group">
             <label for="phone">Contact Number</label>
             <input required type="text" class="form-control" id="phone" name ="phone" aria-describedby="phoneHelp">
-            <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
+            <small id="phoneHelp" class="form-text text-white">We'll never share your phone number with anyone else.</small>
         </div>
 
         <br/>
