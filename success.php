@@ -13,24 +13,24 @@
             $email = $_POST['email'];
             $contact = $_POST['phone'];
             $speciality = $_POST['specialty'];
-            $avatar_path = $_POST['avatar_path'];
+          
             
             
           
 
             if(isset($_GET["avatar"])){
             $orig_file = $_FILES["avatar"]["tmp_name"];
-            $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
             $target_dir = "uploads/";
             $destination = "$target_dir$contact.$ext";
+            $ext= pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
             move_uploaded_file($orig_file,$destination);}
                     
         //exit();
 
             //Call function to insert and track if success or not 
             
-            $isSuccess = $crud->insertAttendees( $fname,$lname,$dob, $email, $contact, $speciality, $avatar_path);
-            $specialityName = $crud->getSpecialtyById($speciality);
+            $isSuccess=$crud->insertAttendees($fname,$lname,$dob, $email,$contact,$speciality,$destination);
+            $specialityName=$crud->getSpecialtyById($speciality);
 
             if($isSuccess){
                 SendEmail::Sendmail($email,"Welcome to IT Conference 2020","You have sucessfully Register. Be educated");
@@ -80,7 +80,7 @@
                 <p class="card-text"> Date of Birth:  <?php echo $_POST['dob'];  ?> </p>
                 <p class="card-text"> Email Add: <?php echo $_POST['email'];  ?> </p>
                 <p class="card-text"> Telephone Number: <?php echo $_POST['phone'];  ?> </p>
-                <p class="card-text"> Telephone Number: <?php echo $_POST['phone'];  ?> </p>
+                
             </div>
         </div>
 
