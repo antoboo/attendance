@@ -7,10 +7,10 @@
     // $charset ='utf8mb4';
 
 //  Remote Database connection 
-    $host = 'sql3.freemysqlhosting.net';
-    $db = 'sql3374843';
-    $user = 'sql3374843';
-    $pass = 'd6ATRueWC6';
+    $host = 'sql9.freemysqlhosting.net';
+    $db = 'sql9376442';
+    $user = 'sql9376442';
+    $pass = 'zlAlWfPUPH';
     $charset ='utf8mb4';
 
      $dsn = "mysql:host=$host; dbname=$db; charset=$charset";
