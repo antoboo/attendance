@@ -73,11 +73,10 @@
         <br/>
 
         <div class="custom-file">
-            <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar" >
-            <label class="custom-file-label" for="avatar">Choose File</label>
-            <small class="form-text text-danger">Photo Upload is Optional</small>
-
-        </div>
+                        <input type="file" class="custom-file-input form-group" id="avatar" name="avatar" accept="image/*">
+                        <label class="custom-file-label" for="avatar">Choose File</label>
+                        <small id="phoneHelp" class="form-text text-success bg-light"> Upload is Optional</small>
+                    </div>
 
         <!-- <div>
             <form action="upload.php" method="post" enctype="multipart/form-data">
