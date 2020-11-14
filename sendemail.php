@@ -3,7 +3,7 @@
 
     // class SendEmail{
     //     public static function SendMail($to, $subject, $content){
-    //         //$key = '882205179AC641FF7764C7AD13E1C470AC5CEF35F862483160C1A01553F0C907478D1832B239077ED261D7A539B428CB';
+    //         //$key = '';
     //         $url = 'https://api.elasticemail.com/v2/email/send';
 
     //         try {
