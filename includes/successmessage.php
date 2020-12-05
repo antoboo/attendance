@@ -1,5 +1,5 @@
 
 
 <div class="alert alert-success" role="alert">
-  Operation has been completed 
+  You are now registered as a patient.  
 </div>

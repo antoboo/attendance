@@ -37,7 +37,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         </tr>
 
     </table> <br/> <br/> <br/>
-    <input type ="submit" value="Login" class="btn btn-primary btn-block"> <br/>
+    <input type ="submit" value="Login" class="btn btn-success btn-block"> <br/>    
     <a href ="a"> Forgot Password </a>
 
 </form> <br/> <br/> <br/>

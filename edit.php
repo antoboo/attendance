@@ -1,12 +1,11 @@
-   
-        <?php 
+<?php 
     
         $title = 'Edit Record';
         require_once 'includes/header.php';
         require_once 'includes/auth_check.php';
         require_once 'db/conn.php';
 
-        $results = $crud -> getSpecialties();
+        $results = $crud -> getDoctors();
 
         if(!isset ($_GET['id']))
         {
@@ -17,7 +16,7 @@
         else {
 
             $id = $_GET['id'];
-            $attendee = $crud -> getAttendeeDetails($id);
+            $clients = $crud -> getClientsDetails($id);
            
           
 
@@ -30,36 +29,36 @@
 
     <form method="post" action ="editpost.php">
 
-            <input type ="hidden" name = "id" value="<?php echo $attendee['attendee_id'] ?>" />
+            <input type ="hidden" name = "id" value="<?php echo $clients['clients_id'] ?>" />
         
         <div class="form-group">
 
             <label for="firstname">First Name</label>
-            <input type="text" class="form-control" value="<?php echo $attendee['firstname'] ?>" id="firstname" name = "firstname">
+            <input type="text" class="form-control" value="<?php echo $clients['firstname'] ?>" id="firstname" name = "firstname">
             
         </div>
 
         <div class="form-group">
 
             <label for="lastname">Last Name</label>
-            <input type="text" class="form-control" value="<?php echo $attendee['lastname'] ?>" id="lastname" name ="lastname">
+            <input type="text" class="form-control" value="<?php echo $clients['lastname'] ?>" id="lastname" name ="lastname">
             
         </div>
 
         <div class="form-group">
 
             <label for="dob">Date of Birth</label>
-            <input type="text" class="form-control" value="<?php echo $attendee['dateofbirth'] ?>" id="dob"  name ="dob">
+            <input type="text" class="form-control" value="<?php echo $clients['dateofbirth'] ?>" id="dob"  name ="dob">
             
         </div>
 
         <div class="form-group">
 
-            <label for="specialty">Area of Expertise</label>
-                <select class="form-control" id="specialty" name="specialty" >
+            <label for="clients">Area of Expertise</label>
+                <select class="form-control" id="clients" name="clients" >
                     <?php while($r = $results->fetch(PDO::FETCH_ASSOC)) {?>
-                        <option value = "<?php echo $r['specialty_id']?>"
-                            <?php if($r['specialty_id'] == $attendee['specialty_id']) echo 'selected'?> >
+                        <option value = "<?php echo $r['clients_id']?>"
+                            <?php if($r['clients_id'] == $clients['clients_id']) echo 'selected'?> >
                             <?php echo $r['name']; ?> 
                         </option>
                     <?php } ?>
@@ -70,14 +69,14 @@
             
         <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" value="<?php echo $attendee['emailaddress'] ?>" id="email" name="email" aria-describedby="emailHelp">
+            <input type="email" class="form-control" value="<?php echo $clients['emailaddress'] ?>" id="email" name="email" aria-describedby="emailHelp">
             <small id="emailHelp" class="form-text text-white">We'll never share your email with anyone else.</small>
         </div>
 
 
         <div class="form-group">
             <label for="phone">Contact Number</label>
-            <input type="text" class="form-control" value="<?php echo $attendee['contactnumber'] ?>" id="phone" name ="phone" aria-describedby="phoneHelp">
+            <input type="text" class="form-control" value="<?php echo $clients['contactnumber'] ?>" id="phone" name ="phone" aria-describedby="phoneHelp">
             <small id="phoneHelp" class="form-text text-white">We'll never share your phone number with anyone else.</small>
         </div>
 

@@ -11,12 +11,12 @@
         
         
             
-            public function insertAttendees($fname, $lname, $dob, $email, $contact, $speciality, $avatar_path)
+            public function insertClients($fname, $lname, $dob, $email,$laddress, $contact,$doctors, $avatar_path)
             {
                 
                 try {
                     //define sql statement to be excuted
-                    $sql = "INSERT INTO attendee (firstname,lastname,dateofbirth,emailaddress,contactnumber,specialty_id,avatar_path)VALUES (:fname, :lname, :dob,  :email, :contact, :specialty, :avatar_path)";
+                    $sql = "INSERT INTO clients (firstname,lastname,dateofbirth,emailaddress,laddress,contactnumber,doctors_id,avatar_path)VALUES (:fname, :lname, :dob,  :email, :laddress, :contact, :doctors, :avatar_path)";
                     //define sql statement to be excuted
                     $stmt = $this -> db -> prepare($sql);       
                     //bind all placeholder to the actual values
@@ -24,8 +24,9 @@
                     $stmt->bindparam(':lname', $lname);
                     $stmt->bindparam(':dob', $dob);
                     $stmt->bindparam(':email', $email);
+                    $stmt->bindparam(':laddress', $laddress);
                     $stmt->bindparam(':contact', $contact);
-                    $stmt->bindparam(':specialty', $speciality);
+                    $stmt->bindparam(':doctors', $doctors);
                     $stmt->bindparam(':avatar_path', $avatar_path);
                     $stmt->execute();
                     return true;
@@ -44,10 +45,10 @@
 
             }    
 
-            public function editAttendee($id, $fname, $lname, $dob, $email, $contact, $specialty){
+            public function editClients($id, $fname, $lname, $dob, $email,$laddress, $contact,$doctors){
                 try {
-                $sql = "UPDATE `attendee` SET `firstname`=:fname,`lastname`=:lname,`dateofbirth`=:dob, `emailaddress`=:email, 
-                `contactnumber`=:contact,`specialty_id`=:specialty WHERE attendee_id = :id ";
+                $sql = "UPDATE `clients` SET `firstname`=:fname,`lastname`=:lname,`dateofbirth`=:dob, `emailaddress`=:email, `laddress`=:laddress,
+                `contactnumber`=:contact,`doctors_id`=:doctors WHERE clients_id = :id ";
 
                     $stmt = $this -> db -> prepare($sql);       
                     //bind all placeholder to the actual values
@@ -56,8 +57,9 @@
                     $stmt->bindparam(':lname', $lname);
                     $stmt->bindparam(':dob', $dob);
                     $stmt->bindparam(':email', $email);
+                    $stmt->bindparam(':laddress', $laddress);
                     $stmt->bindparam(':contact', $contact);
-                    $stmt->bindparam(':specialty', $specialty);
+                    $stmt->bindparam(':doctors', $doctors);
 
                     $stmt->execute();
                     return true;
@@ -71,18 +73,18 @@
 
             
 
-            public function getAttendees(){
+            public function getClients(){
 
-                $sql = "SELECT * FROM `attendee` a inner join specialties s on a.specialty_id = s.specialty_id";
+                $sql = "SELECT * FROM `clients` a inner join doctors s on a.doctors_id = s.doctors_id";
                 $result = $this->db->query($sql);
                 return $result;
             }
 
 
-            public function getAttendeeDetails($id){
+            public function getClientsDetails($id){
 
             try{
-                $sql = "SELECT * from attendee a inner join specialties s on a.specialty_id = s.specialty_id where attendee_id = :id";
+                $sql = "SELECT * from clients a inner join doctors s on a.doctors_id = s.doctors_id where clients_id = :id";
                 $stmt = $this->db->prepare($sql);
                 $stmt -> bindparam(':id',$id);
                 $stmt ->execute();
@@ -98,9 +100,9 @@
 
 
             }
-            public function getSpecialties(){
+            public function getDoctors(){
             try{
-                $sql = "SELECT * FROM `specialties`";
+                $sql = "SELECT * FROM `doctors`";
                 $result = $this->db->query($sql);
                 return $result;
             }catch( PDOException $e)
@@ -111,9 +113,9 @@
             }
             }
 
-            public function getSpecialtyById($id){
+            public function getDoctorsById($id){
             try {
-                $sql = "SELECT * FROM `specialties` where specialty_id = :id";
+                $sql = "SELECT * FROM `doctors` where doctors_id = :id";
                 $stmt = $this->db->prepare($sql);
                 $stmt -> bindparam(':id', $id);
                 $stmt ->execute();
@@ -128,11 +130,11 @@
             }
 
 
-            public function deleteAttendee($id){
+            public function deleteClients($id){
                 
                 try {
 
-                    $sql = "delete from attendee WHERE attendee_id = :id";
+                    $sql = "delete from clients WHERE clients_id = :id";
                     $stmt = $this->db->prepare($sql);
                     $stmt -> bindparam(':id',$id);
                     $stmt ->execute();
@@ -148,11 +150,11 @@
 
             }
 
-            public function deleteAllAttendee(){
+            public function deleteAllClients(){
                 
                 try {
 
-                    $sql = "TRUNCATE attendee";
+                    $sql = "TRUNCATE clients";
                     $stmt = $this->db->prepare($sql);
                     //$stmt -> bindparam(':id',$id);
                     $stmt ->execute();
