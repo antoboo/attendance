@@ -2,7 +2,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-lg-3 footer_logo">
-						<a href="index.php"><img src="assets/images/logo1.png" alt=""></a>
+						<a href="index.php"><img src="assets/images/logo.png" alt=""></a>
 						<p>
 							
 						</p>
@@ -104,6 +104,8 @@
 		<script type="text/javascript" src="assets/js/jquery.revolution.js"></script>
 		<!-- custom Js -->
 		<script src="assets/js/custom.js" type="text/javascript"></script>
+
+		
 
 	</body>
 

@@ -1,26 +1,29 @@
 <?php    
         $title = 'Success';
         require_once 'includes/header.php';  
-        require_once 'sendemail.php';
+        require_once 'contactsendemail.php';
         
-       
+        $FromEmail= '';
+        $Subject = '';
+        $msg = '';
         if(isset($_POST['submit'])) {
             //extract values from the $_POST array
             $UName = $_POST['UName'];          
             $FromEmail = $_POST['FromEmail'];
             $Subject = $_POST['Subject'];           
             $msg = $_POST['msg'];
+          }
             
-        }
-                             
-           $mailTo="antoboo@gmail.com";
-           $headers = "From:".$FromMail;
-           $txt = "You have recieved received an email from".$UName.".\n\n".$msg;
+            $isSuccess=boolval(false);
 
-       mail($mailTo, $Subject, $txt, $headers);
-       header("Location:contact.php?mailsend");
+            if($isSuccess=true){
+                SendEmail::Sendmail($FromEmail,$Subject, $msg);
                 
                 
+                include 'includes/successmessage.php';
+
+            }else {
+                include 'includes/errormessage.php';
 
 
                 // if (empty($_POST["gender"])) {
@@ -36,13 +39,12 @@
                     return $data;
                   }
             
-        
+        }
 
 
 
     
 
 ?>
-
 <?php echo '<br/> <br/> <hr/>'; ?>
 <?php require_once 'includes/footer.php'  ?>

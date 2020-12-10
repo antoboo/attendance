@@ -1,5 +1,5 @@
 ﻿<?php 
-    $title = 'Index';
+    $title = 'Services';
 	require_once 'includes/header.php';
 ?>
 		<!-- Intro Section -->
@@ -43,11 +43,19 @@
 					<div class="col-md-6 col-lg-4 mb-sm-30 mb-xs-30">
 						<div class="service_box">
 							<figure>
-								<img src="assets/images/service/image1.jpg" alt="" />
+								<img src="assets/images/service/image10.png" alt="" />
 							</figure>
-							<h3><a href="#">IBGNY</a></h3>
+							<h3><a href="#">Electrotherapy</a></h3>
 							<p>
-							Our OB-GYNs provide a wide range of preventive care services, including pap smears,pelvic exams, ultrasounds, and blood work. We can answer all questions about pregnancy,reproductive health, infertility, & numerous other topics.
+							We employed a wide range of electrotherapeutic devices. 
+							These tools may be used to help relieve pain, restore mobility and help you to resume your activities quickly.
+							<ul>
+							<li>Shockwave</li>
+							<li>Interferential therapy (IFT)</li>	
+							<li>Ultrasound</li>
+							<li>Transcutaneous Electrical Nerve</li>
+							</ul>
+
 							</p>
 						</div>
 					</div>

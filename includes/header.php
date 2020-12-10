@@ -13,40 +13,25 @@
 		<link href="assets/css/font-awesome.css" rel="stylesheet" type="text/css">
 		<link href="assets/css/ionicons.css" rel="stylesheet" type="text/css">
 		<link href="assets/css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+		
 		<!--Main Slider-->
 		<link href="assets/css/settings.css" type="text/css" rel="stylesheet" media="screen">
 		<link href="assets/css/layers.css" type="text/css" rel="stylesheet" media="screen">
 		<link href="assets/css/layers.css" type="text/css" rel="stylesheet" media="screen">
 		<link href="assets/css/owl.carousel.css" type="text/css" rel="stylesheet" media="screen">
 		<link href="assets/css/style.css" rel="stylesheet">
-		<link href="assets/css/header.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/header2.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/footer.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/index.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/theme-color/default.css" rel="stylesheet" type="text/css" id="theme-color" />
+	
+		
+		
 	</head>
 	<body>
-		<!--loader-->
-		<div id="preloader">
-			<div class="sk-circle">
-				<div class="sk-circle1 sk-child"></div>
-				<div class="sk-circle2 sk-child"></div>
-				<div class="sk-circle3 sk-child"></div>
-				<div class="sk-circle4 sk-child"></div>
-				<div class="sk-circle5 sk-child"></div>
-				<div class="sk-circle6 sk-child"></div>
-				<div class="sk-circle7 sk-child"></div>
-				<div class="sk-circle8 sk-child"></div>
-				<div class="sk-circle9 sk-child"></div>
-				<div class="sk-circle10 sk-child"></div>
-				<div class="sk-circle11 sk-child"></div>
-				<div class="sk-circle12 sk-child"></div>
-			</div>
-		</div>
-
-		<!--loader-->
-
-		<!-- HEADER -->
+		
 		<header>
+
 			<div class="top-part__block">
 				<div class="search__box-block">
 					<div class="container">
@@ -63,22 +48,23 @@
 						</div>
 						<div class="col-sm-5">
 							<div class="social-link__block text-right">
-								<a href="facebook.com" class="facebook"> <i class="fa fa-facebook"></i> </a>
-								<a href="twitter.com" class="twitter"> <i class="fa fa-twitter"></i> </a>
-								<a href="google.com" class="google-plus"> <i class="fa fa-google-plus"></i> </a>
-								
+								<a href="https://www.facebook.com/" class="facebook"> <i class="fa fa-facebook"></i> </a>
+								<a href="https://twitter.com/login" class="twitter"> <i class="fa fa-twitter"></i> </a>
+								<a href="https://google.com/login" class="google-plus"> <i class="fa fa-google-plus"></i> </a>						
 
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+
 			<div class="middel-part__block">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-4 logo col-md-12 d-flex align-items-center">
 
-							<a href="index.php"> <img src="assets/images/logo1.png"  width= "100%"; height=" 90px"; alt="Logo"> </a>
+							<a href="index.php"> <img src="assets/images/logo.png"  width= "100%"; height=" 90px"; alt="Logo"> </a>
 
 							<div class="navbar-header">
 								<button type="button" class="navbar-toggle hidden-lg-up" data-toggle="collapse" data-target="#navbar-menu">
@@ -116,7 +102,7 @@
 										<i class="fa fa-envelope" aria-hidden="true"></i>
 										<p>
 											Mail Us
-											<span> <a href="mailto:jamaica.medicalctr@gmail.com.com">jamaica.medicalctr@gmail.com</a> </span>
+											<span> <a href="mailto:jamaica.medicalctr@gmail.com">jamaica.medicalctr@gmail.com</a> </span>
 										</p>
 									</li>
 									<li>
@@ -134,19 +120,20 @@
 										<?php } ?>
 										</div>
 									</li>
-								</ul>
+								</ul>                               
+			
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+
 			<div class="main_nav stricky-header__top navbar-toggleable-md">
 
 				<nav class="navbar navbar-default navbar-sticky bootsnav">
 					<div class="container">
-						<!-- Start Header Navigation -->
-
-						<!-- End Header Navigation -->
+						
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="navbar-menu">
 							<ul class="nav navbar-nav mobile-menu d-flex justify-content-between">
@@ -159,13 +146,11 @@
 									<span class="submenu-button"></span>
 									<ul class="dropdown-menu">
 										<li>
-											<a href="about.html">About US</a>
+											<a href="about.php">About US</a>
 										</li>
+										
 										<li>
-											<a href="history.html">History</a>
-										</li>
-										<li>
-											<a href="career.html">Career</a>
+											<a href="career.php">Career</a>
 										</li>
 										
 									</ul>
@@ -178,7 +163,7 @@
 											<a href="services.php">All Services</a>
 										</li>
 										<li>
-											<a href="services-details.html">Services Details</a>
+											<a href="services-details.php">Services Details</a>
 										</li>
 
 									</ul>
@@ -200,27 +185,9 @@
 								</li>				
 		
 								<li>
-									<a href="#!">Shop</a>
+									<a href="appointcalendar.php">Calendar</a>
 									<span class="submenu-button"></span>
-									<!-- Nav Dropdown -->
-									<ul class="dropdown-menu">
-										<li>
-											<a href="shop.html">Shop</a>
-										</li>
-										<li>
-											<a href="shop-sidebar.html">shop sidebar</a>
-										</li>
-										<li>
-											<a href="shop-details.html">shop details</a>
-										</li>
-										<li>
-											<a href="cart.html">cart</a>
-										</li>
-										<li>
-											<a href="checkout.html">Checkout</a>
-										</li>
-									</ul>
-									<!-- End Nav Dropdown -->
+									
 								</li>
 								<li>
 									<a href="#!">Contact us</a>
@@ -229,9 +196,7 @@
 										<li>
 											<a href="contact.php">contact</a>
 										</li>
-										<li>
-											<a href="contact1.html">contact 2</a>
-										</li>
+										
 									</ul>
 								</li>
 							</ul>
@@ -240,6 +205,8 @@
 					</div>
 				</nav>
 			</div>
+
+			
 		</header>
 
 		<!-- END HEADER -->

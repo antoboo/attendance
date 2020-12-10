@@ -11,7 +11,7 @@
         
         
             
-            public function insertClients($fname, $lname, $dob, $email,$laddress, $contact,$doctors, $avatar_path)
+            public function insertClients($fname, $lname, $dob, $email,$laddress, $contact, $doctors, $avatar_path)
             {
                 
                 try {

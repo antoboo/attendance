@@ -1,26 +1,50 @@
 <?php
-$title = 'User Login';
+    $title = 'User Login'; 
 
-require_once 'includes/header.php';  
-require_once 'db/conn.php';
+    require_once 'includes/header.php'; 
+    require_once 'db/conn.php'; 
+    
+    //If data was submitted via a form POST request, then...
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $username = strtolower(trim($_POST['username']));
+        $password = $_POST['password'];
+        $new_password = md5($password.$username);
 
-//if data was submitted via a form POST request, then....
-if($_SERVER['REQUEST_METHOD']=='POST'){
-    $username = strtolower(trim($_POST['username']));
-    $password = $_POST['password'];
-    $new_password = md5($password.$username);
-    $result = $user->getUser($username, $new_password);
-   
-    if(!$result){
+        $result = $user->getUser($username,$new_password);
+        if(!$result){
+            echo '<div class="alert alert-danger">Username or Password is incorrect! Please try again. </div>';
+        }else{
+            $_SESSION['username'] = $username;
+            $_SESSION['userid'] = $result['id'];
+            header("Location: viewrecords.php");
+        }
 
-        echo'<div class="alert-danger or Password is incorrect! Please try again."></div>';
-    }else{
-        $_SESSION['username'] = $username;
-        $_SESSION['userid'] = $result['id'];
-        header("Location:viewrecords.php");
     }
- }
 ?>
+
+<!-- <?php
+// $title = 'User Login';
+
+// require_once 'includes/header.php';  
+// require_once 'db/conn.php';
+
+// //if data was submitted via a form POST request, then....
+// if($_SERVER['REQUEST_METHOD']=='POST'){
+//     $username = strtolower(trim($_POST['username']));
+//     $password = $_POST['password'];
+//     $new_password = md5($password.$username);
+//     $result = $user->getUser($username, $new_password);
+   
+//     if(!$result){
+
+//         echo'<div class="alert-danger or Password is incorrect! Please try again."></div>';
+//     }else{
+//         $_SESSION['username'] = $username;
+//         $_SESSION['userid'] = $result['id'];
+//         header("Location: viewrecords.php");
+//     }
+//  }
+?> -->
 
 
 <h1 class='text-center'><?php echo $title ?> </h1>

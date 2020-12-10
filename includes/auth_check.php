@@ -1,3 +1,5 @@
-<?php if(!isset($_SESSION['userid'])){
-    header("Location:login.php");
-}?> 
+<?php
+    if(!isset($_SESSION['username'])){
+        header("Location: login.php");
+    }
+?>
